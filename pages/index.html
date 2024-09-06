@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <title>Registration Form</title>
+  </head>
+
+  <body class="background-animated">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .background-animated {
+        background-color: #282c34;
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .background-animated:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(120deg, #3498db, #8e44ad, #e74c3c, #f39c12);
+        background-size: 300% 300%;
+        animation: gradientShift 15s ease infinite;
+        z-index: -1;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      #card {
+        width: 450px;
+        text-align: center;
+        position: relative;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        padding: 40px 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        color: #fff;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+      }
+
+      .form-outline > input {
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 30px;
+        padding: 15px 20px;
+        border: none;
+        outline: none;
+        color: #333;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-outline > input:focus {
+        background-color: #fff;
+      }
+
+      .form-label {
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .btn {
+        border-radius: 30px;
+        padding: 10px 30px;
+        background: linear-gradient(45deg, #ff6f61, #de435d);
+        border: none;
+        transition: background 0.3s ease;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background: linear-gradient(45deg, #de435d, #ff6f61);
+      }
+
+      .btn:focus {
+        box-shadow: 0 0 10px #ff6f61, 0 0 10px #ff6f61;
+        outline: none;
+      }
+    </style>
+
+    <section class="text-center">
+      <div class="card shadow-5-strong" id="card">
+        <div class="card-body">
+          <h2 class="fw-bold">Registration Form</h2>
+          <form method="post" action="/register" style="text-align: left">
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example1">Name</label>
+              <input
+                type="text"
+                id="form3Example1"
+                name="name"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example3">Email address</label>
+              <input
+                type="email"
+                id="form3Example3"
+                name="email"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example4">Password</label>
+              <input
+                type="password"
+                id="form3Example4"
+                name="password"
+                class="form-control"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block mb-4">
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+
